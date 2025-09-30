@@ -10,7 +10,7 @@ CFLAGS += -Isrc/include
 CFLAGS += $$(pkg-config --cflags $(PKGS))
 
 LIBS += -lm
-LIBS += $$(pkg-config --libs $(PKAGS))
+LIBS += $$(pkg-config --libs $(PKGS))
 LIBS += -lalloc
 
 OBJS += $(CACHE)/main.o
