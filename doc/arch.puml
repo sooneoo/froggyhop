@@ -1,0 +1,38 @@
+@startuml
+
+object GameState {
+    GameState* (*callback)(GameState*, GameManager_Context*, float)
+}
+
+object GameManager_Context {
+    GameState* state_stack
+}
+
+object GameState_Menu
+object GameState_Pause
+object GameState_Options
+object GameState_GameControl
+object GameState_GameOver
+
+object GameManager {
+    GameManager_Context context
+    GameState* state
+}
+
+GameManager <|-- GameManager_Context
+GameManager_Context <|-- GameState_Menu
+GameManager_Context <|-- GameState_Pause
+GameManager_Context <|-- GameState_Options
+GameManager_Context <|-- GameState_GameControl
+GameManager_Context <|-- GameState_GameOver
+
+GameState_Menu <|-- GameState
+GameState_Pause <|-- GameState
+GameState_Options <|-- GameState
+GameState_GameControl <|-- GameState
+GameState_GameOver <|-- GameState
+
+@enduml
+
+
+
