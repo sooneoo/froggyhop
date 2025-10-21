@@ -12,7 +12,7 @@ typedef struct {
 #define froggyhop_version() \
     (FroggyHop_Version) {   \
         .major = 0          \
-        , .minor = 1        \
+        , .minor = 2        \
         , .patch = 0        \
 }
 
